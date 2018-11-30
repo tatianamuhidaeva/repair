@@ -74,6 +74,7 @@ $(document).ready(function () {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    swipe: false,
     // centerMode: true,
     prevArrow: '<div class="arrow arrow-prev"></div>',
     nextArrow: '<div class="arrow arrow-next"></div>',
@@ -85,10 +86,17 @@ $(document).ready(function () {
         }
       },
       {
+        breakpoint: 768,
+        settings: {
+          swipe: true
+        }
+      },
+      {
         breakpoint: 660,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,          
+          swipe: true
         }
       }
     ]
