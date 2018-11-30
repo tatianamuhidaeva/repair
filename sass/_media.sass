@@ -4,6 +4,7 @@ $sm: 768px
 $xs: 660px
 $xxs: 450px
 
+  
 @media (max-width: $lg)
   .container
     width: 95%
@@ -47,6 +48,7 @@ $xxs: 450px
         height: 60px
         margin-bottom: 15px
   // /* end modal*/
+
   .portfolio
     padding: 70px 0 155px
     .container
@@ -63,12 +65,43 @@ $xxs: 450px
         margin-right: 15px
   .arrow
     bottom: -67px        
-  /*end portfolio*/        
+  /*end portfolio*/   
+
+  .request
+    &-wrap
+      &::after
+        left: 50%
+        height: 640px
+    &-questions
+      padding-right: 20px
+      padding-top: 70px
+      padding-bottom: 50px
+      width: 666px - 178px      
+      &__subtitle
+        margin-bottom: 92px      
+    &-form
+      padding-left: 20px
+      padding-top: 70px
+      padding-bottom: 50px
+      width: 504px - 75px
+    /* end request */
+
+@media (max-width: 1024px)  
+  .request
+    &-wrap
+      &::after
+        left: 553px
+    &-questions
+      width: 666px - 78px
+  /* end request */
+
 @media (max-width: $md)
   .hidden-md
     display: none
-  .visible-inline-mdf
-    display: inline
+  .visible-inline-md
+    display: inline    
+  .visible-md
+    display: block
   .main
     &__title
       font-size: 3rem
@@ -173,6 +206,7 @@ $xxs: 450px
         height: 60px
         margin-bottom: 15px
   // /* end modal*/
+
   .portfolio
     padding: 60px 0 135px
     background: url('../img/portfolio/portfolio-bg.png') repeat
@@ -193,7 +227,22 @@ $xxs: 450px
       transform: translateX(-38px)
     &-next
       transform: translateX(8px)
-  /*end portfolio*/    
+  /*end portfolio*/  
+
+  .request
+    &-wrap
+      justify-content: center
+      &::after
+        display: none
+    &__title, &__subtitle
+      text-align: center
+      margin-bottom: 40px
+    &-questions, &-form
+      padding-right: 0  
+      padding-left: 0 
+    &-questions__subtitle
+      margin-bottom: none
+
 @media (max-width: $sm)
   .main
     &-wrap
@@ -237,6 +286,17 @@ $xxs: 450px
     &-slider
       max-width: 625px //($xs * 0.95)
   /*end portfolio*/    
+
+  .request
+    &__title    
+      font-size: 22px
+      margin-bottom: 30px
+    &__subtitle
+      font-size: 14px
+      margin-bottom: 30px
+    &__item
+      margin-bottom: 30px
+
 @media (max-width: $xs)  
   .hidden-xs
     display: none
@@ -273,7 +333,17 @@ $xxs: 450px
       right: 0
       &__item
         margin-right: 0
-  /* end portfolio */
+  /* end portfolio */  
+
+  .request
+    &__item
+      font-size: 14px
+      padding-left: 20px
+      &::before
+        left: -27px
+        top: -10px
+    /* end request */    
+
 @media (max-width: $xxs)  
   .hidden-xxs
     display: none
@@ -309,6 +379,12 @@ $xxs: 450px
       font-size: 20px
       margin-bottom: 32px
     &-slider
-      max-width: 300px 
-      
-  /* end portfolio */      
+      max-width: 300px       
+  /* end portfolio */  
+    
+  .request
+    &__title
+      font-size: 18px
+    &__subtitle
+      font-size: 13px
+    /* end request */      
