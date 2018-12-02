@@ -1,76 +1,44 @@
+// $.validator.setDefaults({
+//   submitHandler: function() {
+//     alert("submitted!");
+//   }
+// });
+// jQuery.validator.addMethod("phoneUS", function(phone_number, element) {
+//   phone_number = phone_number.replace(/\s+/g, "");
+//   return this.optional(element) || phone_number.length > 9 &&
+//       phone_number.match(/^(\+?1-?)?(\([2-9]\d{2}\)|[2-9]\d{2})-?[2-9]\d{2}-?\d{4}$/);
+// }, "Please specify a valid phone number");
+
 $(document).ready(function () {
-
-  // });
   /* Валидация форм v*/
-  $.validator.addMethod("letters", function (value, element) {
-    return this.optional(element) || value == value.match(/^[a-zA-ZА-Яа-я\s]*$/);
-  });
-  $.validator.addMethod("isPhone", function (value, element) {
-    return this.optional(element) || value == value.match(/\+7\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}\-[0-9]{3}/);
-  });
-  $successMsg = $(".messageShow");
 
-  $("#form-1").validate({
-    rules: {
-      user_name: {
-        required: true,
-        minlength: 3,
-        letters: true
-      },
-      user_phone: {
-        required: true,
-        isPhone: true
-      }
-    },
-    messages: {
-      user_name: "Введите Ваше имя (Более 2 букв, рус en, пробел)",
-      user_phone: "Введите номер в формате +7-999-99-99-999"
-    },
-    submitHandler: function () {
-      $successMsg.show();
-    }
-  });
-  $("#form-2").validate({
-    rules: {
-      user_name: {
-        required: true,
-        minlength: 3,
-        letters: true
-      },
-      user_phone: {
-        required: true,
-        isPhone: true
-      }
-    },
-    messages: {
-      user_name: "Введите Ваше имя (Более 2 букв, рус en, пробел)",
-      user_phone: "Введите номер в формате +7-999-99-99-999"
-    },
-    submitHandler: function () {
-      $successMsg.show();
-    }
-  });
-  $("#form-3").validate({
-    rules: {
-      user_name: {
-        required: true,
-        minlength: 3,
-        letters: true
-      },
-      user_phone: {
-        required: true,
-        isPhone: true
-      }
-    },
-    messages: {
-      user_name: "Введите Ваше имя (Более 2 букв, рус en, пробел)",
-      user_phone: "Введите номер в формате +7-999-99-99-999"
-    },
-    // submitHandler: function () {
-    //   $successMsg.show();
-    // }
-  });
-
+		// validate signup form on keyup and submit
+		// $(".ajax-submit").validate({
+		// 	rules: {
+		// 		user_name: {
+		// 			required: true,
+		// 			minlength: 2
+		// 		},
+		// 		user_phone: {
+    //       required: true,
+    //       matches: "[0-9]+",
+    //       minlength: 16, 
+    //       maxlength: 16
+		// 		}
+		// 	},
+		// 	messages: {
+		// 		user_name: {
+		// 			required: "Введите имя",
+		// 			minlength: "Минимальная длина имени 2 символа"
+		// 		},
+		// 		user_phone: {
+		// 			required: "Введите номер телефона",
+		// 			matches: "Введи номер в таком виде +7-222-22-22-222",
+    //       minlength: "Номер должен состоять из 11 знаков",
+    //       maxlength: "Номер должен состоять из 11 знаков"
+		// 		}
+		// 	}
+		// });
 
   /* Обработчик форм. Посылает письмо на почту*/
   $('.ajax-submit').on('submit', function (event) {
@@ -79,9 +47,9 @@ $(document).ready(function () {
       type: "POST",
       url: "./mailer/smart.php",
       data: $(this).serialize()
-    }).done(function () {
+    }).done(function(){
       $(this).find("input").val("");
-      $('#modal-success').toggleClass('flex');
+      alert("Сообщение успешно отправлено");
       $(".ajax-submit").trigger("reset");
     });
     return false;
@@ -97,9 +65,6 @@ $(document).ready(function () {
   });
   $('.modal__close').on('click', function () {
     $('.modal').toggleClass('flex');
-  });
-  $('#modal-success').on('click', function () {
-    $('.modal-success').toggleClass('flex');
   });
 
   /* Portfolio Slick. Слайдер в блоке Портфолио */

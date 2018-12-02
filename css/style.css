@@ -435,6 +435,10 @@ img {
   display: none;
 }
 
+.visible {
+  display: block;
+}
+
 .flex {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -455,6 +459,17 @@ img {
   font-family: 'Museo Sans Light' , sans-serif;
   font-size: 16px;
   line-height: 1.5;
+}
+
+label.error {
+  position: absolute;
+  left: 13px;
+  bottom: -12px;
+  width: 100%;
+  color: red;
+  word-wrap: normal;
+  overflow-x: visible;
+  text-align: center;
 }
 
 .modal {
@@ -613,6 +628,10 @@ img {
 
 .modal-form__input {
   width: 100%;
+}
+
+.modal-form-wrap-input {
+  position: relative;
   margin-bottom: 17px;
 }
 
@@ -650,6 +669,96 @@ img {
 
 .modal__close:hover {
   cursor: pointer;
+}
+
+.modal-success {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.62);
+  z-index: 100;
+  display: none;
+}
+
+.modal-success .modal-dialog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  max-width: 500px;
+  background-color: #fff;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.modal-success .modal__close-success {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Museo Sans Bold' , sans-serif;
+}
+
+.modal-success .modal__close-success:hover {
+  cursor: pointer;
+}
+
+.modal-success .modal-form-wrap {
+  padding: 70px;
+}
+
+.modal-success .modal-form {
+  max-width: 373px;
+  margin: auto;
+  text-align: center;
+}
+
+.modal-success .modal-form__subtitle {
+  display: block;
+  font-family: 'Museo Sans Light' , sans-serif;
+  color: #333333;
+  font-size: 16px;
+  margin-bottom: 36px;
+}
+
+.modal-success .modal-form__btn {
+  position: static;
+  width: 100%;
+  height: 70px;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-success .modal-form-info__text {
+  font-family: 'Museo Sans Light' , sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  color: #333333;
+}
+
+.modal-success .modal-form-info__phone {
+  display: block;
+  margin-top: 20px;
+}
+
+.modal-success .modal-form-info__phone a {
+  font-family: 'Museo Sans Bold' , sans-serif;
+  font-size: 24px;
+  color: #333333;
+  text-decoration: none;
 }
 
 .header-wrap {
@@ -843,11 +952,16 @@ img {
 
 .feedback-form__input {
   width: 270px;
+}
+
+.feedback-form-wrap {
+  position: relative;
+  display: inline-block;
   margin-bottom: 30px;
   margin-left: 4px;
 }
 
-.feedback-form__input:first-child {
+.feedback-form-wrap:first-child {
   margin-right: 22px;
 }
 
@@ -1088,6 +1202,10 @@ img {
 
 .request-form__input {
   width: 100%;
+}
+
+.request-form-wrap-input {
+  position: relative;
   margin-bottom: 17px;
 }
 
@@ -1186,7 +1304,7 @@ img {
   .modal-form__input[type="tel"] {
     height: 60px;
   }
-  .modal-form__input {
+  .modal-form-wrap-input {
     margin-bottom: 15px;
   }
   .modal-form__btn {
@@ -1220,7 +1338,7 @@ img {
   .modal-form__input[type="tel"] {
     height: 50px;
   }
-  .modal-form__input {
+  .modal-form-wrap-input {
     margin-bottom: 7px;
   }
   .modal-form__btn {
@@ -1288,7 +1406,7 @@ img {
   .modal-form__input[type="tel"] {
     height: 60px;
   }
-  .modal-form__input {
+  .modal-form-wrap-input {
     margin-bottom: 15px;
   }
   .modal-form__btn {
@@ -1400,12 +1518,12 @@ img {
 }
 
 @media (max-width: 660px) {
-  .feedback-form__input {
+  .feedback-form-wrap {
     display: block;
     margin-right: auto;
     margin-left: auto;
   }
-  .feedback-form__input:first-child {
+  .feedback-form-wrap:first-child {
     margin-right: auto;
   }
   .feedback-form__btn {

@@ -22,6 +22,8 @@ img
   max-width: 100%
 .hidden
   display: none
+.visible
+  display: block
 .flex
   display: flex !important
 .no-wrap
@@ -35,7 +37,24 @@ img
   font-size: 16px;
   line-height: 1.5
   
+// .messageShow
+//   color: green
+//   text-align: center
+//   display: none
+
+label.error
+  position: absolute
+  left: 13px
+  bottom: -12px
+  width: 100%
+  color: red
+  word-wrap: normal
+  overflow-x: visible
+  text-align: center
+    
+  
 @import 'modal'
+@import 'modal-success'
 @import 'header'
 @import 'main'
 @import 'feedback'
