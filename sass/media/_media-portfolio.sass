@@ -1,0 +1,66 @@
+@media (max-width: $lg)
+  .portfolio
+    padding: 70px 0 155px
+    .container
+      &::before
+        top: -70px
+        // left: -280px
+        height: calc(100% + 225px)
+    &__title
+      margin-bottom: 72px
+    &-slider
+      max-width: 942px
+      right: -15px
+      &__item
+        margin-right: 15px
+  .arrow
+    bottom: -67px        
+@media (max-width: $md)
+  .portfolio
+    padding: 60px 0 135px
+    .container
+      &::before
+        height: calc(100% + 195px)
+        top: -60px
+    &__title
+      font-size: 26px
+      margin-bottom: 52px
+    &-slider
+      max-width: 720px //($sm * 0.95)
+      &__item
+        margin-right: 15px
+  .arrow
+    bottom: -57px
+    &-prev
+      transform: translateX(-38px)
+    &-next
+      transform: translateX(8px)   
+@media (max-width: $sm)
+  .portfolio
+    padding: 50px 0 125px
+    background: url('../img/portfolio/portfolio-bg.png') repeat
+    .container
+      &::before
+        display: none    
+    &__title
+      font-size: 22px
+    &-slider
+      max-width: 625px //($xs * 0.95)
+@media (max-width: $xs)
+  .portfolio
+    &__title
+      margin-bottom: 32px
+    &-slider
+      max-width: 370px 
+      right: 0
+      &__item
+        margin-right: 0  
+@media (max-width: $xxs)  
+  .portfolio
+    padding: 40px 0 95px
+    &__title
+      font-size: 20px
+      margin-bottom: 32px
+    &-slider
+      max-width: 300px       
+        

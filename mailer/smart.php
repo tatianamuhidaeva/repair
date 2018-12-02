@@ -27,7 +27,7 @@ $mail->addAddress('batagaeva.ta@gmail.com');     // Add a recipient
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Это тема сообщения';
+$mail->Subject = 'Тест урока по AJAX';
 $mail->Body    = '
 	Пользователь оставил свои данные <br> 
 	Имя: ' . $name . ' <br>

@@ -1,0 +1,49 @@
+@media (max-width: $sm)
+  .feedback
+    padding: 50px 20px
+    &-form
+      max-width: $sm
+      text-align: center
+      &__title
+        font-size: 2.2rem
+        line-height: 30px
+        margin-bottom: 25px
+      &__subtitle
+        font-size: 1.3rem
+        margin-bottom: 35px
+      &::after
+        display: none
+      &-info
+        margin: 0 auto
+        text-align: left  
+@media (max-width: $xs)
+  .feedback-form    
+    &__title
+      // margin-bottom: 20px
+    &__input
+      display: block
+      &:first-child
+        margin-right: auto     
+      margin-right: auto
+      margin-left: auto
+    &__btn
+      width: $xs - 300px
+      width: 270px
+      font-size: 1.4rem
+    &-info    
+      width: 270px
+      margin-right: auto
+      margin-left: auto  
+      &__text       
+        width: 270px
+        margin-right: 0px
+        text-align: center
+        font-size: 1.2rem  
+@media (max-width: $xxs)
+  .feedback-form
+    &__title
+      font-size: 2rem
+      margin-bottom: 20px
+    &__subtitle
+      font-size: 1.2rem
+      margin-bottom: 25px  

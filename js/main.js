@@ -43,10 +43,9 @@ $(document).ready(function () {
   /* Обработчик форм. Посылает письмо на почту*/
   $('.ajax-submit').on('submit', function (event) {
     event.preventDefault();
-    // console.log($(this).serialize());
     $.ajax({
       type: "POST",
-      url: "../mailer/smart.php",
+      url: "./mailer/smart.php",
       data: $(this).serialize()
     }).done(function(){
       $(this).find("input").val("");

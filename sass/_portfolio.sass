@@ -1,19 +1,19 @@
 
 .portfolio
+  position: relative
   padding: 90px 0 185px
   text-align: center
   background-color: $bg-light-color
-  z-index: 1
   .container
     position: relative
-    z-index: 1
+    z-index: 1    
     &::before
       content: ""
       position: absolute
       top: -90px
-      left: -142px
-      width: 845px
-      height: 735px
+      right: 466px
+      width: 100%
+      height: calc(100% + 275px)
       background:
         repeat: repeat
         image: url('../img/portfolio/portfolio-bg.png')

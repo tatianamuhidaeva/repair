@@ -1,12 +1,14 @@
 .request
   background-color: $primary-color  
   position: relative
-  z-index: 3
+  overflow: hidden
+  // z-index: 3
   &-md
-    background-color: #fff
+    // background-color: #fff
+    background: #fff no-repeat right url('../img/request/request_bg.png')            
   &__title
     font-size: 22px
-    z-index: inherit
+    // z-index: inherit
     margin-bottom: 41px
   &__subtitle
     margin-bottom: 47px
@@ -28,7 +30,7 @@
       background: #fff no-repeat left url('../img/request/request_bg.png')    
   &-questions
     position: relative
-    z-index: 4
+    z-index: 1
     text-align: left
     width: 664px
     padding: 98px 136px 70px 0
@@ -56,7 +58,7 @@
       border: 2px solid #000
   &-form    
     position: relative
-    z-index: 4
+    z-index: 1
     text-align: center
     width: 504px
     padding: 95px 0 70px 136px
