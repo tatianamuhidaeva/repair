@@ -25,6 +25,10 @@
       width: 666px - 78px      
 @media (max-width: $md)
   .request
+    background: #fff no-repeat right url('../img/request/request_bg.png')
+    &-md
+      background-color: $primary-color
+      background-image: none
     &-wrap
       justify-content: center
       &::after
@@ -37,6 +41,7 @@
       padding-left: 0 
     &-questions__subtitle
       margin-bottom: none  
+          
 @media (max-width: $sm)
   .request
     &__title    

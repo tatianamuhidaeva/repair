@@ -691,18 +691,16 @@ label.error {
   display: none;
 }
 
-.modal-success .modal-dialog {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.modal-success-dialog {
   position: relative;
-  max-width: 500px;
+  max-width: 400px;
   background-color: #fff;
   max-height: 100vh;
   overflow-y: auto;
+  padding: 50px;
 }
 
-.modal-success .modal__close-success {
+.modal-success__close {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -711,54 +709,28 @@ label.error {
   font-family: 'Museo Sans Bold' , sans-serif;
 }
 
-.modal-success .modal__close-success:hover {
+.modal-success__close:hover {
   cursor: pointer;
 }
 
-.modal-success .modal-form-wrap {
-  padding: 70px;
-}
-
-.modal-success .modal-form {
-  max-width: 373px;
-  margin: auto;
-  text-align: center;
-}
-
-.modal-success .modal-form__subtitle {
+.modal-success-text {
   display: block;
   font-family: 'Museo Sans Light' , sans-serif;
   color: #333333;
   font-size: 16px;
-  margin-bottom: 36px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.modal-success .modal-form__btn {
+.modal-success-text a {
+  color: #333333;
+}
+
+.modal-success-form__btn {
   position: static;
   width: 100%;
   height: 70px;
   font-size: 16px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.modal-success .modal-form-info__text {
-  font-family: 'Museo Sans Light' , sans-serif;
-  font-size: 15px;
-  line-height: 20px;
-  color: #333333;
-}
-
-.modal-success .modal-form-info__phone {
-  display: block;
-  margin-top: 20px;
-}
-
-.modal-success .modal-form-info__phone a {
-  font-family: 'Museo Sans Bold' , sans-serif;
-  font-size: 24px;
-  color: #333333;
-  text-decoration: none;
 }
 
 .header-wrap {
@@ -1116,10 +1088,6 @@ label.error {
   overflow: hidden;
 }
 
-.request-md {
-  background: #fff no-repeat right url("../img/request/request_bg.png");
-}
-
 .request__title {
   font-size: 22px;
   margin-bottom: 41px;
@@ -1424,6 +1392,13 @@ label.error {
 }
 
 @media (max-width: 450px) {
+  .modal-success-dialog {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 450px) {
   .header-text__contacts {
     margin-right: 5px;
   }
@@ -1683,6 +1658,13 @@ label.error {
 }
 
 @media (max-width: 992px) {
+  .request {
+    background: #fff no-repeat right url("../img/request/request_bg.png");
+  }
+  .request-md {
+    background-color: #ffd200;
+    background-image: none;
+  }
   .request-wrap {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
