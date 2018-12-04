@@ -1,0 +1,69 @@
+.price
+  padding: 92px 0 80px
+  &__title
+    margin-bottom: 55px
+    text-align: center
+  &__subtitle
+    margin-bottom: 55px
+    text-align: center
+  &-cards
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &__item      
+      width: 370px
+      height: 410px
+      border: 1px solid #e8e8e8
+      background-color: #ffffff
+      text-align: center
+      margin-bottom: 30px
+      overflow: hidden
+    &__img
+      position: relative
+      width: 370px
+      height: 260px
+      img
+        object-fit: cover
+      &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 370px
+        height: 260px
+        background:
+          image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 100%)
+          repeat: no-repeat
+        opacity: 0
+        transition-duration: 0.3s
+      &:hover::after    
+        opacity: 0.8        
+    &__title
+      +ff-light
+      font-size: 18px
+      margin-top: 37px
+      margin-bottom: 30px
+      color: #000
+    &__price-href
+      display: inline-block
+      position: relative
+      +ff-bold
+      font-size: 16px
+      color: $text-color
+      text-decoration: none
+      z-index: 0
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        bottom: -3px
+        left: 0
+        width: 100%
+        height: 3px
+        background-color: $primary-color
+        transition-duration: 0.3s
+        z-index: -1
+      &:hover::after
+        height: 13px
+
+

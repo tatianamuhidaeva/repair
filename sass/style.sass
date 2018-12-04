@@ -4,6 +4,7 @@
 @import 'fonts'
 @import 'interface'
 
+
 html
   font-size: $base-text-size
 *, *::before, *::after
@@ -34,14 +35,8 @@ img
   line-height: 1.5
 .section__subtitle
   +ff-light
-  font-size: 16px;
+  font-size: 20px
   line-height: 1.5
-  
-// .messageShow
-//   color: green
-//   text-align: center
-//   display: none
-
 label.error
   position: absolute
   left: 13px
@@ -59,6 +54,9 @@ label.error
 @import 'main'
 @import 'feedback'
 @import 'portfolio'
+@import 'price'
+@import 'steps'
+@import 'sentence'
 @import 'request'
 
 @import 'media/media-common'
@@ -68,4 +66,9 @@ label.error
 @import 'media/media-main'
 @import 'media/media-feedback'
 @import 'media/media-portfolio'
+@import 'media/media-price'
+@import 'media/media-steps'
+@import 'media/media-sentence'
 @import 'media/media-request'
+
+@import 'animate'

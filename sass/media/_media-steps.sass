@@ -1,0 +1,39 @@
+@media (max-width: $lg)
+  .steps
+    padding: 70px 0 60px
+    &-cards
+      // justify-content: flex-end    
+      &__item:nth-last-of-type(2)
+        // order: 6
+        // transform: rotateY(180deg)  
+@media (max-width: $md)
+  .steps
+    padding: 60px 0 50px  
+    &__title
+      margin-bottom: 45px
+      font-size: 25px
+    &__subtitle
+      margin-bottom: 45px 
+      font-size: 18px       
+@media (max-width: $sm)
+  .steps
+    padding: 50px 0 40px
+    &__title
+      margin-bottom: 30px
+    &__subtitle
+      margin-bottom: 30px       
+
+ 
+@media (max-width: 484px)
+  .steps-cards__item:first-of-type
+    width: 320px
+@media (max-width: $xxs) 
+  .steps
+    padding: 40px 0 30px 
+    &__title
+      margin-bottom: 20px
+      font-size: 20px
+    &__subtitle
+      margin-bottom: 20px
+      font-size: 16px   
+// @media (max-width: $xxs) 

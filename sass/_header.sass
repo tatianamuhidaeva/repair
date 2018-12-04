@@ -5,6 +5,11 @@
     align-items: center
     flex-wrap: wrap
     padding: 7px 0
+  &-logo
+    // position: relative
+    animation: flyIn 2s linear 0.2s 3 alternate,  zoom 1s linear 0.2s 6
+    &:hover
+      animation-play-state: paused
   &-text
     display: flex
     align-items: center
@@ -28,4 +33,6 @@
         background: 
           image: url('../img/feedback/phone-receiver_yellow.png')   
         display: none
+
+
     

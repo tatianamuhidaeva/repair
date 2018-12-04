@@ -1,0 +1,50 @@
+  
+@keyframes flyIn
+  from 
+    margin-top: 0
+    margin-left: 0
+  to 
+    margin-left: 200px
+    margin-top: 0px
+
+@keyframes zoom
+  from 
+    width: 0px
+  to 
+    width: 100px
+
+@keyframes zoomFont
+  from 
+    font-size: 10px
+    font-weight: normal
+  to 
+    font-size: 80px
+    font-weight: bold 
+
+.animatable 
+  visibility: hidden
+  animation-play-state: paused
+
+/* show objects being animated */
+.animate-in
+  visibility: visible  
+  animation-fill-mode: both  
+  animation-duration: 1s
+  animation-play-state: running
+
+.animate-out 
+  visibility: visible
+  animation-fill-mode: both
+  animation-duration: 1s
+  animation-play-state: running
+  animation-direction: reverse
+.animate-out:after 
+  content: ''
+  letter-spacing: inherit
+
+.animate-in.zoomFont, .animate-out.zoomFont
+  animation: zoomFont 1s linear 0.2s 3
+
+  
+  
+  
