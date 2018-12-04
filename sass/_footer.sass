@@ -1,0 +1,46 @@
+.footer
+  display: flex
+  justify-content: flex-start
+  &-map
+    width: 56%
+    height: 640px
+  &-contacts
+    max-width: 440px
+    padding: 91px 10px 91px 133px
+    &__title
+      margin-bottom: 90px
+      font-size: 22px
+    &__list
+      padding-left: 40px
+      list-style: none
+    &__item
+      position: relative
+      +ff-light
+      font-size: 16px
+      line-height: 26px
+      color: #000000
+      margin-bottom: 28px
+      strong
+        display: block
+        width: 160px
+      a
+        color: #000000
+        text-decoration: none
+      &::before
+        content: ''
+        position: absolute
+        width: 20px
+        height: 20px
+        left: -40px
+        top: 7px
+        background-repeat: no-repeat
+      &-map::before
+        background-image: url('../img/geo-primary.png')
+      &-clock::before
+        background-image: url('../img/clock-primary.png')
+      &-phone::before
+        background-image: url('../img/phone-primary.png')
+
+
+
+

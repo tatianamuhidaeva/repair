@@ -1,11 +1,15 @@
 @media (max-width: $lg)
   .steps
     padding: 70px 0 60px
-    &-cards
-      // justify-content: flex-end    
-      &__item:nth-last-of-type(2)
-        // order: 6
-        // transform: rotateY(180deg)  
+@media (max-width: 1127px)  
+  .steps
+    &-cards 
+      &__item
+        &:not(:first-of-type)
+          margin-left: 40px  
+          &::before
+            left: -60px
+
 @media (max-width: $md)
   .steps
     padding: 60px 0 50px  
@@ -14,7 +18,13 @@
       font-size: 25px
     &__subtitle
       margin-bottom: 45px 
-      font-size: 18px       
+      font-size: 18px    
+    &-cards 
+      &__item
+        &:not(:first-of-type)
+          margin-left: 15px
+          &::before       
+            display: none
 @media (max-width: $sm)
   .steps
     padding: 50px 0 40px

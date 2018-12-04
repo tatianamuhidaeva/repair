@@ -1,31 +1,26 @@
 @media (max-width: $lg)
   .request
-    &-wrap
-      &::after
-        left: 50%
-        height: 640px
     &-questions
       padding-right: 20px
       padding-top: 70px
-      padding-bottom: 50px
-      width: 666px - 178px      
+      padding-bottom: 40px
+      // width: 666px - 178px      
       &__subtitle
         margin-bottom: 92px      
     &-form
       padding-left: 20px
       padding-top: 70px
       padding-bottom: 50px
-      width: 504px - 75px  
+      // width: 504px - 75px  
 @media (max-width: 1024px)  
   .request
-    &-wrap
-      &::after
-        left: 553px
     &-questions
       width: 666px - 78px      
 @media (max-width: $md)
   .request
     background: #fff no-repeat right url('../img/request/request_bg.png')
+    &::after
+      display: none 
     &-md
       background-color: $primary-color
       background-image: none

@@ -1,5 +1,6 @@
-$(document).ready(function (){
-
+$(document).ready(function () {
+  $('button.btn-submit').prop('disabled', 'disabled');
+  
   /* Валидация форм v*/
   $.validator.addMethod("letters", function (value, element) {
     return this.optional(element) || value == value.match(/^[a-zA-ZА-Яа-я\s]*$/);
@@ -60,71 +61,49 @@ $(document).ready(function (){
       user_phone: "Введите номер в формате +79998877666"
     }
   });
-
-  $('#form-1 > .btn-submit').on('click', function(event) {
+  $('#form-1 input').on('keyup blur', function () { // fires on every keyup & blur
     if ($('#form-1').valid()) {
-      $('#form-1 label.error').css('visibility', 'hidden');
-      $('#form-1').on('submit', function(event){ 
-        event.preventDefault();
-        $.ajax({
-          type: "POST",
-          url: "./mailer/smart.php",
-          data: $(this).serialize()
-        }).done(function () {
-          $(this).find("#form-1 input").val("");
-          $('#modal-success').toggleClass('flex');
-          $("#form-1").trigger("reset");
-        });
-        return false;
-      });  
-   } else {
-     $('#form-1 label.error').css('visibility', 'visible');
-   }
+       // checks form for validity
+      $('#form-1 > .btn-submit').prop('disabled', false); // enables button
+    } else {
+      
+      $('#form-1 > .btn-submit').prop('disabled', 'disabled'); // disables button
+    }
   });
-  
-  $('#form-2 > .btn-submit').on('submit', function(event) {
+  $('#form-2 input').on('keyup blur', function () { // fires on every keyup & blur
     if ($('#form-2').valid()) {
-      $('#form-2 label.error').css('visibility', 'hidden');
-      $('#form-2').on('submit', function(event){ 
-        event.preventDefault();
-        $.ajax({
-          type: "POST",
-          url: "./mailer/smart.php",
-          data: $(this).serialize()
-        }).done(function () {
-          $(this).find("#form-2 input").val("");
-          $('#modal-success').toggleClass('flex');
-          $("#form-2").trigger("reset");
-        });
-        return false;
-      });  
-   } else {
-     $('#form-2 label.error').css('visibility', 'visible');
-   }
+       // checks form for validity
+      $('#form-2 > .btn-submit').prop('disabled', false); // enables button
+    } else {
+      
+      $('#form-2 > .btn-submit').prop('disabled', 'disabled'); // disables button
+    }
   });
-  
-  $('#form-3').on('submit', function(event) {
+  $('#form-3 input').on('keyup blur', function () { // fires on every keyup & blur
     if ($('#form-3').valid()) {
-      $('#form-3 label.error').css('visibility', 'hidden');
-      $('#form-3').on('submit', function(event){ 
-        event.preventDefault();
-        $.ajax({
-          type: "POST",
-          url: "./mailer/smart.php",
-          data: $(this).serialize()
-        }).done(function () {
-          $(this).find("#form-3 input").val("");
-          $('#modal-success').toggleClass('flex');
-          $("#form-3").trigger("reset");
-        });
-        return false;
-      });  
-   } else {
-     $('#form-3 label.error').css('visibility', 'visible');
-   }
+       // checks form for validity
+      $('#form-3 > .btn-submit').prop('disabled', false); // enables button
+    } else {
+      
+      $('#form-3 > .btn-submit').prop('disabled', 'disabled'); // disables button
+    }
   });
-  
-
+  $('.ajax-submit').on('submit', function (event) {
+    // if ($('#form-1').valid()) {
+    event.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "./mailer/smart.php",
+      data: $(this).serialize()
+    }).done(function () {
+      $(this).find(".ajax-submit input").val("");
+      $('#modal-success').toggleClass('flex');
+      $(".ajax-submit").trigger("reset");
+      $('.ajax-submit .btn-submit').prop('disabled', 'disabled');
+    });
+    return false;
+    // }
+  });
 
   /* Вызов модального окна */
   $('#btn-callback-1').on('click', function () {
@@ -177,59 +156,6 @@ $(document).ready(function (){
   });
 });
 
-
-// Adjusted version of https://codepen.io/bramus/pen/yikfd
-// This version also reverses the animation when elements that got slide into view
-// succesively slide out of view again.
-
-// In case you're wondering about that `.css('top', $animatable.css('top'))` part:
-// -> it's the magic part in this code as it triggers layout, so the browser will 
-// render after having deleted the animate-in class and having added the animate-out
-// class. That way the animation-play-state will actually change from running to 
-// paused to running again, thus triggering the start of the animation
-
-jQuery(function($) {
-  
-  // Function which adds the 'animated' class to any '.animatable' in view
-  var doAnimations = function() {
-    
-    // Calc current offset and get all animatables
-    var offset = $(window).scrollTop() + $(window).height(),
-        $animatables = $('.animatable');
-    
-    // Check all animatables and animate them if necessary
-		$animatables.each(function(i) {
-       var $animatable = $(this);
-      
-      // Items that are "above the fold"
-			if (($animatable.offset().top + $animatable.height() + 50) < offset) {
-        
-        // Item previously wasn't marked as "above the fold": mark it now
-        if (!$animatable.hasClass('animate-in')) {
-          $animatable.removeClass('animate-out').css('top', $animatable.css('top')).addClass('animate-in');
-        }
-
-			}
-      
-      // Items that are "below the fold"
-      else if (($animatable.offset().top + $animatable.height() + 50) > offset) {
-        
-        // Item previously wasn't marked as "below the fold": mark it now
-        if ($animatable.hasClass('animate-in')) {
-          $animatable.removeClass('animate-in').css('top', $animatable.css('top')).addClass('animate-out');
-        }
-
-      }
-
-    });
-
-	};
-  
-  // Hook doAnimations on scroll, and trigger a scroll
-	$(window).on('scroll', doAnimations);
-  $(window).trigger('scroll');
-
-});
 
 
 /*btnCallBack1 = document.querySelector('#btn-callback-1');
