@@ -37,7 +37,7 @@
       transform: translateX(8px)   
 @media (max-width: $sm)
   .portfolio
-    padding: 50px 0 125px
+    padding: 50px 0 85px
     background: url('../img/portfolio/portfolio-bg.png') repeat
     .container
       &::before
@@ -46,6 +46,8 @@
       font-size: 22px
     &-slider
       max-width: 625px //($xs * 0.95)
+  .arrow
+    bottom: -20px      
 @media (max-width: $xs)
   .portfolio
     &__title
@@ -55,6 +57,8 @@
       right: 0
       &__item
         margin-right: 0  
+  .arrow
+    bottom: -48px          
 @media (max-width: $xxs)  
   .portfolio
     padding: 40px 0 95px

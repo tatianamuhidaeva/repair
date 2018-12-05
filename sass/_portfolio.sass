@@ -4,22 +4,25 @@
   padding: 90px 0 185px
   text-align: center
   background-color: $bg-light-color
+  // z-index: 1
+  &::before
+    content: ""
+    position: absolute
+    top: 0px
+    right: 41.5%
+    width: 58.5%
+    height: 100%
+    // height: calc(100% + 275px)
+    background:
+      repeat: repeat
+      image: url('../img/portfolio/portfolio-bg.png')
+    // z-index: 0  
   .container
     position: relative
     z-index: 1    
-    &::before
-      content: ""
-      position: absolute
-      top: -90px
-      right: 466px
-      width: 100%
-      height: calc(100% + 275px)
-      background:
-        repeat: repeat
-        image: url('../img/portfolio/portfolio-bg.png')
-      z-index: -1
   &__title
     margin-bottom: 92px
+    // z-index: 1
   &-slider
     right: -20px
     text-align: center

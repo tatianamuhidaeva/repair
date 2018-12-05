@@ -1,6 +1,65 @@
+@media (max-width: $lg)
+  .feedback
+    &-form
+      &-wrap
+        margin-bottom: 15px   
+      &__btn
+        margin-bottom: 10px 
+      &-info
+        font-size: 1.2rem
+        &__text
+          margin-right: 55px
+        &__contact          
+          &::before
+            left: -50px   
+@media (max-width: 1031px)
+  .feedback
+    padding-top: 60px
+    // padding-bottom: 26px
+    &-form
+      text-align: center
+      &-wrap
+        width: 99%
+        &:first-child
+          margin-right: 0
+      &-info
+        &__text
+          margin-right: 42px
+        &__contact          
+          &::before
+            left: -35px 
+@media (max-width: $md)
+  .feedback
+    padding-top: 30px
+    &__title
+      font-size: 2rem
+      margin-bottom: 20px
+    &__subtitle
+      font-size: 1.2rem
+      margin-bottom: 25px
+    &-form
+      &-wrap
+        margin-bottom: 15px   
+      &__btn
+        margin-bottom: 10px   
+      &-info
+        font-size: 1.5rem
+        
+        &__text
+          text-align: center
+          width: 100%
+        &__contact
+          text-align: center
+          width: 100%
 @media (max-width: $sm)
   .feedback
-    padding: 50px 20px
+    // padding: 50px 20px
+    padding: 50px 0px 40px
+    max-width: 370px
+    margin: 0 auto
+    height: auto
+    &::after
+      display: none
     &-form
       max-width: $sm
       text-align: center
@@ -9,15 +68,20 @@
         line-height: 30px
         margin-bottom: 25px
       &__subtitle
-        font-size: 1.3rem
+        font-size: 1.4rem
         margin-bottom: 35px
       &::after
         display: none
+      &__btn
+        margin-top: 15px
+        margin-bottom: 27px          
       &-info
         margin: 0 auto
-        text-align: left  
+        &__text
+          margin: 0 auto 
 @media (max-width: $xs)
-  .feedback-form    
+  .feedback-form   
+     
     &__title
       // margin-bottom: 20px
     &-wrap
@@ -38,12 +102,12 @@
         width: 270px
         margin-right: 0px
         text-align: center
-        font-size: 1.2rem  
+        // font-size: 1.2rem  
 @media (max-width: $xxs)
   .feedback-form
     &__title
-      font-size: 2rem
+      font-size: 1.8rem
       margin-bottom: 20px
     &__subtitle
-      font-size: 1.2rem
+      font-size: 1.3rem
       margin-bottom: 25px  

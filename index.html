@@ -133,11 +133,13 @@
           <span class="modal-form__subtitle">
             Заполните поля ниже - мы свяжемся с Вами
           </span>
-          <form action="mailer/smart.php" class="ajax-submit" id="form-1">
+          <form action="#" class="ajax-submit" id="form-1">
             <div class="modal-form-wrap-input"><input class="modal-form__input input input-name" type="text" id="user_name"
-                name="user_name" minlength="2" placeholder="Ваше имя" required></div>
+                name="user_name" minlength="2" placeholder="Ваше имя" required>
+                <label for="user_name" class="error error-name"></label></div>
             <div class="modal-form-wrap-input"><input class="modal-form__input input input-tel" type="tel" id="user_phone"
-                name="user_phone" placeholder="Ваш телефон" pattern="\+7[0-9]{10}" required></div>
+                name="user_phone" placeholder="Ваш телефон" pattern="\+7[0-9]{10}" required>
+                <label for="user_phone" class="error error-phone"></label></div>
 
             <button class="modal-form__btn btn btn-submit" type="submit">
               Узнать стоимость
@@ -205,8 +207,8 @@
           </div><!-- /.main-advantages__item -->
         </div>
       </div>
-      <div class="main-img wow zoomIn" data-wow-delay="0.5s">
-        <img class="main-img__img" src="img/main/main-img.png" alt="План-схема">
+      <div class="main-img">
+        <img class="main-img__img hidden visible-sm" src="img/main/main-img.png" alt="План-схема">
       </div>
     </div>
   </div>
@@ -220,11 +222,13 @@
         <span class="feedback-form__subtitle">
           Оставьте заявку на разработку бесплатного дизайн-проекта!
         </span>
-        <form action="mailer/smart.php" class="ajax-submit" id="form-2">
+        <form action="#" class="ajax-submit" id="form-2">
           <div class="feedback-form-wrap  wow tada"><input class="feedback-form__input input input-name" type="text" id="user_name"
-              name="user_name" minlength="2" placeholder="Ваше имя" required></div>
+              name="user_name" minlength="2" placeholder="Ваше имя" required>
+              <label for="user_name" class="error error-name">проверка видимости</label></div>
           <div class="feedback-form-wrap  wow tada"><input class="feedback-form__input input input-tel" type="tel" id="user_phone"
-              name="user_phone" placeholder="Ваш телефон" pattern="\+7[0-9]{10}" required></div>
+              name="user_phone" placeholder="Ваш телефон" pattern="\+7[0-9]{10}" required>
+              <label for="user_phone" class="error error-phone">проверка видимости</label></div>
 
 
           <button class="feedback-form__btn btn btn-submit wow tada" type="submit">
@@ -232,15 +236,15 @@
           </button>
         </form>
         <div class="feedback-form-info">
-          <div class="feedback-form-info__text hidden-xs">
+          <div class="feedback-form-info__text hidden-md">
             Наш менеджер перезвонит Вам
             в течение 60 секунд
           </div>
-          <div class="feedback-form-info__contact hidden-xs">
+          <div class="feedback-form-info__contact hidden-md">
             или перезвоните нам сами
-            <a class="feedback-form-info__phone" href="tel:+74954225131">+7 (495) 42-251-31</a>
+            <br><a class="feedback-form-info__phone" href="tel:+74954225131">+7 (495) 42-251-31</a>
           </div>
-          <div class="feedback-form-info__text visible-xs hidden">
+          <div class="feedback-form-info__text visible-md hidden">
             Наш менеджер перезвонит Вам
             в течение 60 секунд или перезвоните нам сами
             <br><a class="feedback-form-info__phone" href="tel:+74954225131">+7&nbsp;(495)&nbsp;42-251-31</a>
@@ -425,11 +429,17 @@
             расчет ремонта по телефону</h2>
           <h3 class="section__subtitle request__subtitle">Для этого заполните форму ниже</h3>
 
-          <form action="mailer/smart.php" class="ajax-submit" id="form-3">
-            <div class="request-form-wrap-input wow tada"><input class="request-form__input input input-name" type="text"
-                id="user_name" name="user_name" placeholder="Ваше имя" minlength="5" required></div>
-            <div class="request-form-wrap-input wow tada"><input class="request-form__input input input-tel" type="tel"
-                id="user_phone" name="user_phone" placeholder="Ваш телефон" pattern="\+7[0-9]{10}" required></div>
+          <form action="#" class="ajax-submit" id="form-3">
+            <div class="request-form-wrap-input wow tada">
+              <input class="request-form__input input input-name" type="text"
+                id="user_name" name="user_name" placeholder="Ваше имя" minlength="5" required>
+              <label for="user_name" class="error error-name"></label>
+            </div>
+            <div class="request-form-wrap-input wow tada">
+              <input class="request-form__input input input-tel" type="tel"
+                id="user_phone" name="user_phone" placeholder="Ваш телефон" pattern="\+7[0-9]{10}" required>
+                <label for="user_phone" class="error error-phone"></label>
+              </div>
 
 
             <button class="request-form__btn btn btn-submit wow tada" type="submit">
@@ -437,7 +447,7 @@
             </button>
           </form>
           <div class="request-form-info__text">
-            Мы перезвоним Вам в течение <span class="zoomFont animatable">60</span> секунд
+            Мы перезвоним Вам в течение 60 секунд
           </div>
           <!-- </div> -->
         </div>
@@ -475,15 +485,24 @@
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU"></script>
-  <script src="js/main.js"></script>
-  <script src="js/map.js"></script>
+
   <script>
     new WOW().init();
-    document.querySelector('.btn-submit').addEventListener('submit', function () {
-      yaCounter51427879.reachGoal('btn');
+    document.querySelector('#btn-callback-1').addEventListener('click', function () {
+      yaCounter51427879.reachGoal('callme');
+      return true;
+    });
+    document.querySelector('#btn-callback-2').addEventListener('click', function () {
+      yaCounter51427879.reachGoal('callme');
       return true;
     });
   </script>
+
+  <script src="js/callModalWindow.js"></script>
+  <script src="js/validate-and-sendMail.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/slick_customize.js"></script>
+  <script src="js/animate_customize.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,20 @@
 .main
   padding: 80px 0 65px
   background: $bg-light-color
+  position: relative
+  // overflow-x: hidden
+  &::after
+    content: ""
+    position: absolute
+    top: 62px
+    left: 50%
+    width: 51%
+    height: 630px
+    background:
+      image: url(../img/main/main-img.png)
+      repeat: no-repeat
+      size: 110% auto
+    z-index: 1
   &-wrap
     display: flex
     
@@ -46,19 +60,20 @@
       font-size: 1.4rem
       line-height: 1.7em
   &-img
+    
     flex-basis: 50%
     // position: relative
-    // grid-area: main-img
-    // width: 500px
-    // height: 630px
-    // transform-origin: 0 0
-    // $scale-x: 736 / 500
-    // $scale-y: 630 / 400
-    // transform: scaleY($scale-y)
-    
     // z-index: 1
-    &__img
-      width: 500px
-      // object-fit: cover
+    max-width: 500px
+    // transform-origin: 0 0
+    // transform: scaleY(6.3)
 
+
+    &__img
+      // width: 500px
+      // object-fit: cover
+      // height: 100px
+      // transform-origin: 0 0
+      // transform: scale(6.3, 6.3)
+      // box-shadow: 2px 2px 2px 0 #cccccc
     

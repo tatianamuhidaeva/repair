@@ -1,13 +1,29 @@
 .feedback
-  padding: 86px 0 90px
+  padding: 86px 0 0px
+  height: 595px
   overflow: hidden
+  position: relative
+  &::after
+    content: ""
+    display: block
+    position: absolute
+    // top: -86px
+    // right: -974px
+    top: 0
+    left: 58.5%
+    width: 44%
+    height: 100%
+    background:
+      repeat: no-repeat
+      image: url('../img/feedback/form-img.jpg')
+      size: 845px 595px
   &-form
     // display: flex
     // flex-direction: column
     // justify-content: center
     align-items: center
-    max-width: 574px
-    position: relative
+    max-width: 50%
+    // position: relative
     overflow: visible
     &__title
       +ff-bold
@@ -20,34 +36,25 @@
       font-size: 1.6rem
       margin-bottom: 49px
     &__input
-      width: 270px
+      // width: 270px
+      width: 100%
     &-wrap
       position: relative
       display: inline-block
+      width: 47%
       margin-bottom: 30px
-      margin-left: 4px
+      margin-left: 0.5%
       &:first-child
-        margin-right: 22px
+        margin-right: 3.5%
     &__btn
-      width: 570px
+      width: 98.6%
       height: 70px
       font-size: 1.6rem
       margin-bottom: 25px
-      margin-left: 4px
-    &::after
-      content: ""
-      display: block
-      position: absolute
-      top: -86px
-      right: -974px
-      width: 845px
-      height: 595px
-      background:
-        repeat: no-repeat
-        image: url('../img/feedback/form-img.jpg')
-        size: 845px 595px
+      margin-left: 0.5%
+
     &-info
-      width: 559px
+      width: 100%
       display: flex
       justify-content: space-between
       align-items: center
