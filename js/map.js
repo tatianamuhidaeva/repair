@@ -5,6 +5,7 @@ ymaps.ready(function () {
     }, {
       searchControlProvider: 'yandex#search'
     }),
+    
 
     myPlacemark = new ymaps.Placemark([55.685266, 37.410705], {
       hintContent: 'ООО Ремонт квартир, г.Москва, ул. Ленинга, д. 10',
@@ -23,5 +24,7 @@ ymaps.ready(function () {
       iconImageOffset: [0, 0]
     });
 
+  myMap.behaviors.disable('drag'),
+  myMap.behaviors.disable('scrollZoom'),
   myMap.geoObjects.add(myPlacemark)
 });
