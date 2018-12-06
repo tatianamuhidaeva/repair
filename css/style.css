@@ -749,16 +749,6 @@ label.error {
   padding: 7px 0;
 }
 
-.header-logo {
-  -webkit-animation: flyIn 2s linear 0.2s 3 alternate,  zoom 1s linear 0.2s 6;
-          animation: flyIn 2s linear 0.2s 3 alternate,  zoom 1s linear 0.2s 6;
-}
-
-.header-logo:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
-
 .header-text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1075,6 +1065,7 @@ label.error {
   right: -20px;
   text-align: center;
   margin: 0 auto;
+  width: calc(100% - 1px);
 }
 
 .portfolio-slider__item {
@@ -1308,6 +1299,106 @@ label.error {
 .white {
   padding: 40px 0 80px;
   background-color: #ff№аа;
+}
+
+.advantages {
+  background: #fff;
+  padding: 100px 0 80px;
+}
+
+.advantages-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.advantages__item {
+  width: 370px;
+  height: 411px;
+  background-color: #f5f5f5;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% auto;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.advantages__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.advantages__item-1 {
+  background-image: url("../img/advantages/1.png");
+}
+
+.advantages__item-2 {
+  background-image: url("../img/advantages/2.png");
+}
+
+.advantages__item-3 {
+  background-image: url("../img/advantages/3.png");
+}
+
+.advantages__text {
+  font-family: 'Museo Sans Light' , sans-serif;
+  color: #000;
+  font-size: 16px;
+  line-height: 23px;
+  margin: 0;
+}
+
+.contract {
+  background-color: #ffffff;
+  padding: 33px  0 200px;
+  text-align: center;
+}
+
+.contract__title {
+  margin-bottom: 95px;
+}
+
+.contract__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contract__item {
+  width: 295px;
+  margin-bottom: 25px;
+}
+
+.contract__item-img {
+  width: 270px;
+  height: 360px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 36px;
+}
+
+.contract__item-img img {
+  width: 100%;
+}
+
+.contract__item-text {
+  text-align: center;
+  font-family: 'Museo Sans Light' , sans-serif;
+  color: #000000;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .request {
@@ -2180,6 +2271,65 @@ label.error {
   }
   .sentence__text {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .advantages {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 810px) {
+  .advantages__item {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .advantages {
+    padding: 50px 0 40px;
+  }
+  .advantages__item {
+    margin-right: 0;
+  }
+  .advantages__item:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .advantages {
+    padding: 40px 0 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contract {
+    padding: 60px 0 50px;
+  }
+  .contract__title {
+    margin-bottom: 45px;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contract {
+    padding: 50px 0 40px;
+  }
+  .contract__title {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .contract {
+    padding: 40px 0 30px;
+  }
+  .contract__title {
+    margin-bottom: 20px;
+    font-size: 20px;
   }
 }
 

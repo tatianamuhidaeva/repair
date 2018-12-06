@@ -9,38 +9,6 @@
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Ремонт квартир</title>
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript">
-    (function (d, w, c) {
-      (w[c] = w[c] || []).push(function () {
-        try {
-          w.yaCounter51427879 = new Ya.Metrika2({
-            id: 51427879,
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-            webvisor: true,
-            trackHash: true
-          });
-        } catch (e) {}
-      });
-      var n = d.getElementsByTagName("script")[0],
-        s = d.createElement("script"),
-        f = function () {
-          n.parentNode.insertBefore(s, n);
-        };
-      s.type = "text/javascript";
-      s.async = true;
-      s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js";
-      if (w.opera == "[object Opera]") {
-        d.addEventListener("DOMContentLoaded", f, false);
-      } else {
-        f();
-      }
-    })(document, window, "yandex_metrika_callbacks2");
-  </script> <noscript>
-    <div><img src="https://mc.yandex.ru/watch/51427879" style="position:absolute; left:-9999px;" alt="" /></div>
-  </noscript> <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
@@ -134,26 +102,26 @@
             Заполните поля ниже - мы свяжемся с Вами
           </span>
           <form action="#" class="ajax-submit" id="form-1">
-            <div class="modal-form-wrap-input"><input class="modal-form__input input input-name" type="text" id="user_name"
-                name="user_name" minlength="2" placeholder="Ваше имя" required>
-                <label for="user_name" class="error error-name"></label></div>
-            <div class="modal-form-wrap-input"><input class="modal-form__input input input-tel" type="tel" id="user_phone"
-                name="user_phone" placeholder="Ваш телефон" pattern="\+7[0-9]{10}" required>
-                <label for="user_phone" class="error error-phone"></label></div>
-
+            <div class="modal-form-wrap-input">
+              <input class="modal-form__input input input-name" type="text" id="modal-user_name" name="user_name"
+                minlength="2" placeholder="Ваше имя" required>
+              <label for="modal-user_name" class="error error-name"></label>
+            </div>
+            <div class="modal-form-wrap-input">
+              <input class="modal-form__input input input-tel" type="tel" id="modal-user_phone" name="user_phone"
+                placeholder="Ваш телефон" pattern="\+7[0-9]{10}" required>
+              <label for="modal-user_phone" class="error error-phone"></label>
+            </div>
             <button class="modal-form__btn btn btn-submit" type="submit">
               Узнать стоимость
             </button>
           </form>
-
           <div class="modal-form-info__text">
             <span class="hidden-md">Или Вы можете перезвонить нам сами
               <br>по телефону:</span>
-
             <span class="hidden visible-inline-md">Наш номер: </span>
             <span class="modal-form-info__phone"><a href="tel:+78182425131">+7&nbsp;(8182)&nbsp;42-51-31</a></span>
           </div>
-
         </div>
       </div>
     </div>
@@ -223,15 +191,15 @@
           Оставьте заявку на разработку бесплатного дизайн-проекта!
         </span>
         <form action="#" class="ajax-submit" id="form-2">
-          <div class="feedback-form-wrap  wow tada"><input class="feedback-form__input input input-name" type="text" id="user_name"
+          <div class="feedback-form-wrap"><input class="feedback-form__input input input-name" type="text" id="feedback-user_name"
               name="user_name" minlength="2" placeholder="Ваше имя" required>
-              <label for="user_name" class="error error-name"></label></div>
-          <div class="feedback-form-wrap  wow tada"><input class="feedback-form__input input input-tel" type="tel" id="user_phone"
+            <label for="feedback-user_name" class="error error-name"></label></div>
+          <div class="feedback-form-wrap"><input class="feedback-form__input input input-tel" type="tel" id="feedback-user_phone"
               name="user_phone" placeholder="Ваш телефон" pattern="\+7[0-9]{10}" required>
-              <label for="user_phone" class="error error-phone"></label></div>
+            <label for="feedback-user_phone" class="error error-phone"></label></div>
 
 
-          <button class="feedback-form__btn btn btn-submit wow tada" type="submit">
+          <button class="feedback-form__btn btn btn-submit" type="submit">
             Получить бесплатный дизайн<span class="hidden-xs">-проект</span>
           </button>
         </form>
@@ -259,11 +227,11 @@
         <br> мы сделали более 500 ремонтов в квартирах и домах
       </h2>
       <div class="portfolio-slider">
-        <div class="portfolio-slider__item wow fadeInRight" data-wow-delay="0.2s"><img src="img/portfolio/portfolio-1.png"
+        <div class="portfolio-slider__item"><img src="img/portfolio/portfolio-1.png"
             alt="фото нашей работы"></div>
-        <div class="portfolio-slider__item wow fadeInRight" data-wow-delay="0.4s"><img src="img/portfolio/portfolio-2.png"
+        <div class="portfolio-slider__item"><img src="img/portfolio/portfolio-2.png"
             alt="фото нашей работы"></div>
-        <div class="portfolio-slider__item wow fadeInRight" data-wow-delay="0.6s"><img src="img/portfolio/portfolio-1.png"
+        <div class="portfolio-slider__item"><img src="img/portfolio/portfolio-1.png"
             alt="фото нашей работы"></div>
         <div class="portfolio-slider__item"><img src="img/portfolio/portfolio-3.png" alt="фото нашей работы"></div>
         <div class="portfolio-slider__item"><img src="img/portfolio/portfolio-2.png" alt="фото нашей работы"></div>
@@ -284,21 +252,21 @@
           <div class="price-cards__title">Ремонт ванных комнат и с/у </div>
           <a href="#" class="price-cards__price-href">Узнать цены</a>
         </div>
-        <div class="price-cards__item  wow fadeInUp" data-wow-delay="0.4s">
+        <div class="price-cards__item">
           <div class="price-cards__img">
             <img src="img/price/2.png" alt="Наш товар">
           </div>
           <div class="price-cards__title">Ремонт комнат и квартир </div>
           <a href="#" class="price-cards__price-href">Узнать цены</a>
         </div>
-        <div class="price-cards__item  wow fadeInUp" data-wow-delay="0.6s">
+        <div class="price-cards__item">
           <div class="price-cards__img">
             <img src="img/price/3.png" alt="Наш товар">
           </div>
           <div class="price-cards__title">Отделка офисных помещений </div>
           <a href="#" class="price-cards__price-href">Узнать цены</a>
         </div>
-        <div class="price-cards__item  wow fadeInUp" data-wow-delay="0.2s">
+        <div class="price-cards__item">
           <div class="price-cards__img">
             <img src="img/price/4.png" alt="Наш товар">
           </div>
@@ -332,7 +300,7 @@
       <div class="steps-cards">
         <div class="steps-cards__item">
           <div class="steps-cards__img  wow rollIn" data-wow-delay="1s">
-            <img src="img/steps/1.png" class="wow rotateIn" data-wow-iteration="5" alt="Наш товар">
+            <img src="img/steps/1.png" alt="Наш товар">
           </div>
           <div class="steps-cards__title">Вы звоните нам
             или оставляете заявку
@@ -340,7 +308,7 @@
         </div>
         <div class="steps-cards__item">
           <div class="steps-cards__img  wow rollIn" data-wow-delay="0.8s">
-            <img src="img/steps/2.png" class="wow rotateIn" data-wow-iteration="5" alt="Наш товар">
+            <img src="img/steps/2.png" alt="Наш товар">
           </div>
           <div class="steps-cards__title">Согласуем удобное
             для Вас время выезда
@@ -349,7 +317,7 @@
         </div>
         <div class="steps-cards__item ">
           <div class="steps-cards__img wow rollIn" data-wow-delay="0.6s">
-            <img src="img/steps/3.png" class="wow rotateIn" data-wow-iteration="5" alt="Наш товар">
+            <img src="img/steps/3.png" alt="Наш товар">
           </div>
           <div class="steps-cards__title">Рассчитываем смету
             согласовываем
@@ -358,7 +326,7 @@
         </div>
         <div class="steps-cards__item">
           <div class="steps-cards__img  wow rollIn" data-wow-delay="0.4s">
-            <img src="img/steps/4.png" class="wow rotateIn" data-wow-iteration="5" alt="Наш товар">
+            <img src="img/steps/4.png" alt="Наш товар">
           </div>
           <div class="steps-cards__title">Подписываем&nbsp;договор
             закупаем материал
@@ -367,7 +335,7 @@
         </div>
         <div class="steps-cards__item">
           <div class="steps-cards__img  wow rollIn" data-wow-delay="0.2s">
-            <img src="img/steps/5.png" class="wow rotateIn" data-wow-iteration="5" alt="Наш товар">
+            <img src="img/steps/5.png" alt="Наш товар">
           </div>
           <div class="steps-cards__title">Выполняем ремонт
             в указанные сроки
@@ -376,7 +344,7 @@
       </div>
     </div>
   </section>
-  <section class="sentence wow fadeInRight">
+  <div class="sentence wow fadeInRight">
     <div class="container">
       <div class="sentence__text">
 
@@ -385,8 +353,71 @@
         мы используем качественные материалы по оптовым ценам
       </div>
     </div>
+  </div>
+  <div class="advantages">
+    <div class="container advantages-wrap">
+        <div class="advantages__item advantages__item-1">
+          <p class="advantages__text">
+              Поможем закупить все материалы 
+              по оптовым ценам у проверенных поставщиков              
+          </p>
+        </div>
+        <div class="advantages__item advantages__item-2">
+          <p class="advantages__text">
+              Мы дадим Вам <strong>максимальные скидки</strong>
+              у наших партнеров для закупки материалов оптом              
+          </p>
+        </div>
+        <div class="advantages__item advantages__item-3">
+          <p class="advantages__text">
+              Все, что не сможете найти в городе -
+              поможем заказать <strong>у проверенных
+              поставщиков</strong>              
+          </p>
+        </div>
+    </div>
+  </div>
+  <section class="contract">
+    <div class="container">
+      <h2 class="section__title contract__title">
+        Все наши гарантийные обязательства
+        <br>подробно и прозрачно описаны в договоре
+          </h2>
+      <div class="contract__list">
+        <div class="contract__item">
+            <div class="contract__item-img">
+              <a href="#"><img src="img/contract/1.png" alt="скан договора"></a>
+            </div>
+            <div class="contract__item-text">
+                Гарантия на качество
+                выполняемых работ                
+            </div>
+        </div>
+        <div class="contract__item">
+            <div class="contract__item-img">
+              <a href="#"><img src="img/contract/2.png" alt="скан договора"></a>
+            </div>
+            <div class="contract__item-text">
+                Гарантия на фиксированные цены
+                <br>Виды работ и цены на них 
+                прописаны в договоре                
+            </div>
+        </div>
+        <div class="contract__item">
+            <div class="contract__item-img">
+              <a href="#"><img src="img/contract/3.png" alt="скан договора"></a>
+            </div>
+            <div class="contract__item-text">
+                Гарантия на точное соблюдение 
+                сроков и ответственность за 
+                их невыполнение
+            </div>
+        </div>
+        
+      </div>
+
+    </div>
   </section>
-  <section class="white"></section>
   <section class="request request-md hidden visible-md">
     <div class=" container">
       <div class="request-wrap">
@@ -431,15 +462,15 @@
 
           <form action="#" class="ajax-submit" id="form-3">
             <div class="request-form-wrap-input wow tada">
-              <input class="request-form__input input input-name" type="text"
-                id="user_name" name="user_name" placeholder="Ваше имя" minlength="5" required>
-              <label for="user_name" class="error error-name"></label>
+              <input class="request-form__input input input-name" type="text" id="request-user_name" name="user_name"
+                placeholder="Ваше имя" minlength="5" required>
+              <label for="request-user_name" class="error error-name"></label>
             </div>
             <div class="request-form-wrap-input wow tada">
-              <input class="request-form__input input input-tel" type="tel"
-                id="user_phone" name="user_phone" placeholder="Ваш телефон" pattern="\+7[0-9]{10}" required>
-                <label for="user_phone" class="error error-phone"></label>
-              </div>
+              <input class="request-form__input input input-tel" type="tel" id="request-user_phone" name="user_phone"
+                placeholder="Ваш телефон" pattern="\+7[0-9]{10}" required>
+              <label for="request-user_phone" class="error error-phone"></label>
+            </div>
 
 
             <button class="request-form__btn btn btn-submit wow tada" type="submit">
@@ -484,8 +515,43 @@
   <script src="js/slick.min.js"></script>
   <!-- <script src="js/jquery.validate.min.js"></script> -->
   <script src="js/wow.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU"></script>
-
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU"></script>
+  <!-- Yandex.Metrika counter -->
+  <script>
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function () {
+        try {
+          w.yaCounter51427879 = new Ya.Metrika2({
+            id: 51427879,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true
+          });
+        } catch (e) {}
+      });
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () {
+          n.parentNode.insertBefore(s, n);
+        };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js";
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "yandex_metrika_callbacks2");
+  </script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/51427879" style="position:absolute; left:-9999px;" alt="" />
+    </div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
   <script>
     new WOW().init();
     document.querySelector('#btn-callback-1').addEventListener('click', function () {
