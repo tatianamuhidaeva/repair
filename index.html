@@ -5,9 +5,179 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/slick.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/style.css">
+  <style> 
+    
+    .header-wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      padding: 7px 0;
+    }
+    
+    .header-text {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+    
+    .header-text__contacts {
+      text-align: right;
+      margin-right: 30px;
+    }
+    
+    .header-text__city {
+      display: block;
+      font-family: 'Museo Sans Light' , sans-serif;
+      font-size: 1.3rem;
+      margin-bottom: 9px;
+    }
+    
+    .header-text__phone {
+      font-family: 'Museo Sans Bold' , sans-serif;
+      font-size: 2rem;
+      text-decoration: none;
+      color: #333333;
+    }
+    
+    .header-text__btn {
+      width: 170px;
+    }
+    
+    .header-text__btn-phone {
+      display: block;
+      width: 40px;
+      height: 40px;
+      border: 2px solid #ffd200;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-image: url("img/feedback/phone-receiver.png");
+      background-position: 50% 50%;
+      background-image: url("img/feedback/phone-receiver_yellow.png");
+      display: none;
+    }
+    
+    .header-text__btn-phone:hover {
+      -webkit-box-shadow: 1px 1px 1px 0 #b39300;
+              box-shadow: 1px 1px 1px 0 #b39300;
+    }
+    
+    .header-text__btn-phone:active {
+      -webkit-box-shadow: -1px -1px 1px 0 #b39300;
+              box-shadow: -1px -1px 1px 0 #b39300;
+    }
+    
+    .main {
+      padding: 80px 0 65px;
+      background: #f5f5f5;
+      position: relative;
+    }
+    
+    .main::after {
+      content: "";
+      position: absolute;
+      top: 62px;
+      left: 50%;
+      width: 51%;
+      height: 630px;
+      background-image: url(img/main/main-img.png);
+      background-repeat: no-repeat;
+      background-size: 110% auto;
+      z-index: 1;
+    }
+    
+    .main-wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+    
+    .main-text {
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+    }
+    
+    .main__title {
+      font-family: 'Museo Sans Bold' , sans-serif;
+      font-size: 4.1rem;
+      line-height: 1.3em;
+      margin-bottom: 53px;
+    }
+    
+    .main__subtitle {
+      display: block;
+      font-size: 2rem;
+      margin-top: 25px;
+    }
+    
+    .main-advantages {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      max-width: 310px;
+    }
+    
+    .main-advantages__item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-bottom: 25px;
+    }
+    
+    .main-advantages__img {
+      min-width: 41px;
+      height: 41px;
+      border-radius: 50%;
+      border: 2px solid #ffd200;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px;
+      margin-right: 30px;
+    }
+    
+    .main-advantages__img-1 {
+      background-image: url("img/main/clock-circular-outline.png");
+    }
+    
+    .main-advantages__img-2 {
+      background-image: url("img/main/calculator.png");
+    }
+    
+    .main-advantages__img-3 {
+      background-image: url("img/main/paint-board-and-brush.png");
+    }
+    
+    .main-advantages__text {
+      font-family: 'Museo Sans Light' , sans-serif;
+      font-size: 1.4rem;
+      line-height: 1.7em;
+    }
+    
+    .main-img {
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+      max-width: 500px;
+    }</style>
   <title>Ремонт квартир</title>
 </head>
 
@@ -155,19 +325,19 @@
           </span>
         </h1>
         <div class="main-advantages">
-          <div class="main-advantages__item wow rotateInDownLeft">
+          <div class="main-advantages__item">
             <div class="main-advantages__img main-advantages__img-1"></div>
             <div class="main-advantages__text">
               Точно соблюдаем сроки
             </div>
           </div><!-- /.main-advantages__item -->
-          <div class="main-advantages__item wow fadeInLeft">
+          <div class="main-advantages__item">
             <div class="main-advantages__img main-advantages__img-2"></div>
             <div class="main-advantages__text">
               Рассчитаем смету на работы и материалы в день обращения
             </div>
           </div><!-- /.main-advantages__item -->
-          <div class="main-advantages__item wow rotateInUpLeft">
+          <div class="main-advantages__item">
             <div class="main-advantages__img main-advantages__img-3"></div>
             <div class="main-advantages__text">
               Предложим более 100 вариантов исполнения дизайна Вашего жилья
@@ -511,13 +681,36 @@
       <!-- </div> -->
     </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="js/slick.min.js"></script>
-  <!-- <script src="js/jquery.validate.min.js"></script> -->
-  <script src="js/wow.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU"></script>
-  <!-- Yandex.Metrika counter -->
+  <link rel="stylesheet" href="css/style.css">
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/51427879" style="position:absolute; left:-9999px;" alt="" />
+    </div>
+  </noscript>
+ 
   <script>
+    new WOW().init();
+    document.querySelector('#btn-callback-1').addEventListener('click', function () {
+      yaCounter51427879.reachGoal('callme');
+      return true;
+    });
+    document.querySelector('#btn-callback-2').addEventListener('click', function () {
+      yaCounter51427879.reachGoal('callme');
+      return true;
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="js/callModalWindow.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/slick_customize.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/animate_customize.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU"></script>
+
+  <script src="js/validate-and-sendMail.js"></script>
+  <script src="js/map.js"></script>
+   <!-- Yandex.Metrika counter -->
+   <script>
     (function (d, w, c) {
       (w[c] = w[c] || []).push(function () {
         try {
@@ -546,29 +739,8 @@
       }
     })(document, window, "yandex_metrika_callbacks2");
   </script>
-  <noscript>
-    <div>
-      <img src="https://mc.yandex.ru/watch/51427879" style="position:absolute; left:-9999px;" alt="" />
-    </div>
-  </noscript>
-  <!-- /Yandex.Metrika counter -->
-  <script>
-    new WOW().init();
-    document.querySelector('#btn-callback-1').addEventListener('click', function () {
-      yaCounter51427879.reachGoal('callme');
-      return true;
-    });
-    document.querySelector('#btn-callback-2').addEventListener('click', function () {
-      yaCounter51427879.reachGoal('callme');
-      return true;
-    });
-  </script>
 
-  <script src="js/callModalWindow.js"></script>
-  <script src="js/validate-and-sendMail.js"></script>
-  <script src="js/map.js"></script>
-  <script src="js/slick_customize.js"></script>
-  <script src="js/animate_customize.js"></script>
+  <!-- /Yandex.Metrika counter -->
 </body>
 
 </html>
